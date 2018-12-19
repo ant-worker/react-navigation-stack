@@ -159,7 +159,7 @@ class Header extends React.PureComponent {
         props.scene.descriptor.navigation.goBack(props.scene.descriptor.key);
       });
     };
-    return <RenderedLeftComponent onPress={goBack} pressColorAndroid={options.headerPressColorAndroid} tintColor={options.headerTintColor} backImage={options.headerBackImage} title={backButtonTitle} truncatedTitle={truncatedBackButtonTitle} backTitleVisible={this.props.backTitleVisible} titleStyle={options.headerBackTitleStyle} layoutPreset={this.props.layoutPreset} width={width} />;
+    return <RenderedLeftComponent onPress={goBack} pressColorAndroid={options.headerPressColorAndroid} tintColor={options.headerTintColor} backImage={options.headerBackImage} title={backButtonTitle} truncatedTitle={truncatedBackButtonTitle} backTitleVisible={this.props.backTitleVisible} titleStyle={options.headerBackTitleStyle} layoutPreset={this.props.layoutPreset} width={width} scene={props.scene} />;
   };
 
   _renderModularLeftComponent = (props, ButtonContainerComponent, LabelContainerComponent) => {
