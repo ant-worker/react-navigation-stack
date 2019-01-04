@@ -429,7 +429,7 @@ class Header extends React.PureComponent {
 
     return <Animated.View style={[this.props.layoutInterpolator(this.props), Platform.OS === 'ios' && !options.headerTransparent ? {
       backgroundColor: safeHeaderStyle.backgroundColor || DEFAULT_BACKGROUND_COLOR
-    } : null]}>
+    } : null, safeHeaderStyle.height && { height: safeHeaderStyle.height }]}>
         <SafeAreaView forceInset={forceInset} style={containerStyles}>
           {background}
           <View style={styles.flexOne}>{appBar}</View>
